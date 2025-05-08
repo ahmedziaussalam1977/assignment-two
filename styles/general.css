@@ -25,6 +25,7 @@ body {
   text-rendering: optimizeSpeed;
   background-color: #000000;
   color: white;
+  overflow-x: hidden;
 }
 
 ul,

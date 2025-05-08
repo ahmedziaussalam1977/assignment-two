@@ -1,7 +1,10 @@
 /* Nav Bar Related Style */
 .overlay {
   background: linear-gradient(180deg, #111 0%, rgba(119, 119, 119, 0) 100%);
+  min-height: 100vh;
+  width: 100%;
 }
+
 .logo {
   color: #e6533c;
   font-size: 2.25rem;
@@ -11,10 +14,9 @@
 
 .nav-bar {
   display: flex;
-  width: 100%;
   justify-content: space-between;
   align-items: center;
-  padding: 5% 15% 0 15%;
+  padding: 57px 190px 0 190px;
 }
 
 .menu {
@@ -22,7 +24,7 @@
   justify-content: center;
   align-items: center;
   gap: 47px;
-  font: size 1.125rem;
+  font-size: 1.125rem;
   border-radius: 39px;
   border: 1px solid rgba(255, 255, 255, 0.1);
   padding: 20px 15px 20px 15px;
@@ -36,35 +38,244 @@
 
 .mobile-menu {
   display: none;
+  cursor: pointer;
 }
 
 /* Banner Related Style Start Here */
-.banner{
+.banner-container {
   display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
 }
 
-/* Medium Device */
-@media (min-width: 576px) and (max-width: 1024px) {
+.banner-content {
+  padding: 96px 0 76px 190px;
+  width: 50%;
+}
+
+.banner-title {
+  font-size: 4.875rem;
+  font-weight: 900;
+  line-height: 1.1;
+}
+
+.banner-description {
+  font-size: 1rem;
+  font-weight: 400;
+  color: rgba(255, 255, 255, 0.5);
+  margin-top: 20px;
+  line-height: 1.5;
+}
+
+.banner-btn {
+  display: flex;
+  margin-top: 28px;
+  gap: 14px;
+}
+
+.button-one {
+  border-radius: 42px;
+  background: #e6533c;
+  padding: 16px 40px;
+  cursor: pointer;
+  font-weight: 500;
+}
+
+.button-two {
+  border-radius: 42px;
+  border: 1px solid white;
+  padding: 16px 40px;
+  cursor: pointer;
+  font-weight: 500;
+}
+
+.banner-img {
+  width: 50%;
+  position: relative;
+  display: flex;
+  justify-content: center;
+}
+
+.banner-img img {
+  max-height: 90vh;
+  object-fit: contain;
+}
+
+.stat-badge-one {
+  position: absolute;
+  bottom: 47px;
+  left: 210px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 16px;
+  width: 206px;
+  height: 96px;
+  border-radius: 12px;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  background: rgba(48, 48, 48, 0.54);
+  backdrop-filter: blur(10px);
+}
+
+.dot {
+  width: 40px;
+  height: 40px;
+  background-color: #e6533c;
+  border-radius: 20px;
+  position: relative;
+}
+
+.stat-num-one {
+  font-size: 1.5rem;
+  font-weight: 900;
+  text-align: left;
+}
+
+.stat-txt-one {
+  font-size: 1rem;
+  font-weight: 400;
+  color: rgba(239, 237, 232, 0.65);
+  text-align: left;
+}
+
+.stat-badge-two {
+  position: absolute;
+  display: flex;
+  top: 20%;
+  right: 25%;
+  align-items: center;
+  justify-content: center;
+  width: 206px;
+  height: 96px;
+  border-radius: 12px;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  background: rgba(48, 48, 48, 0.54);
+  backdrop-filter: blur(10px);
+}
+
+.stat-num-two {
+  font-size: 1.5rem;
+  font-weight: 900;
+  text-align: left;
+}
+
+.stat-txt-two {
+  font-size: 1rem;
+  font-weight: 400;
+  color: rgba(239, 237, 232, 0.65);
+  text-align: left;
+}
+
+/* Responsive Styles Medium */
+@media screen and (max-width: 992px) {
   .nav-bar {
-    width: 100%;
-    padding: 4% 3% 0 3%;
+    padding: 40px 50px 0 50px;
   }
 
   .menu {
     gap: 25px;
+    padding: 15px 10px;
+    font-size: 1rem;
+  }
+
+  .banner-container {
+    flex-direction: column;
+  }
+
+  .banner-content {
+    padding: 60px 50px;
+    width: 100%;
+  }
+
+  .banner-title {
+    font-size: 3.5rem;
+  }
+
+  .banner-img {
+    width: 100%;
+    margin-top: 30px;
+  }
+
+  .stat-badge-one {
+    bottom: 40px;
+    left: 20%;
+  }
+
+  .stat-badge-two {
+    top: 10%;
+    right: 20%;
   }
 }
 
-/* Small Device */
-@media (max-width: 576px) {
+/* Responsive Styles Small */
+@media screen and (max-width: 576px) {
+  .nav-bar {
+    padding: 30px 20px 0 20px;
+  }
+
+  .logo {
+    font-size: 1.75rem;
+  }
+
   .menu {
     display: none;
   }
+
   .mobile-menu {
-    display: flex;
+    display: block;
+    width: 30px;
   }
-  .nav-bar {
+
+  .banner-content {
+    padding: 40px 20px;
+  }
+
+  .banner-title {
+    font-size: 2.5rem;
+  }
+
+  .banner-description {
+    font-size: 0.9rem;
+  }
+
+  .banner-btn {
+    margin: 28px auto 0;
+    gap: 10px;
+  }
+
+  .button-one,
+  .button-two {
     width: 100%;
-    padding: 4% 2% 0 2%;
+    padding: 14px 20px;
+  }
+
+  .stat-badge-one {
+    width: 160px;
+    height: 80px;
+    bottom: 20px;
+    left: 10%;
+  }
+
+  .stat-badge-two {
+    width: 160px;
+    height: 80px;
+    top: 10%;
+    right: 10%;
+  }
+
+  .stat-num-one,
+  .stat-num-two {
+    font-size: 1.25rem;
+  }
+
+  .stat-txt-one,
+  .stat-txt-two {
+    font-size: 0.85rem;
+  }
+
+  .dot {
+    width: 32px;
+    height: 32px;
   }
 }
