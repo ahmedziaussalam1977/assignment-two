@@ -278,4 +278,7 @@
     width: 32px;
     height: 32px;
   }
+  .txt-break {
+    display: none;
+  }
 }
