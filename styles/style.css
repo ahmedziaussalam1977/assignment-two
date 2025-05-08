@@ -1,0 +1,70 @@
+/* Nav Bar Related Style */
+.overlay {
+  background: linear-gradient(180deg, #111 0%, rgba(119, 119, 119, 0) 100%);
+}
+.logo {
+  color: #e6533c;
+  font-size: 2.25rem;
+  font-weight: 800;
+  font-style: italic;
+}
+
+.nav-bar {
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+  align-items: center;
+  padding: 5% 15% 0 15%;
+}
+
+.menu {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 47px;
+  font: size 1.125rem;
+  border-radius: 39px;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  padding: 20px 15px 20px 15px;
+}
+
+#home {
+  border-radius: 46px;
+  background: #e6533c;
+  padding: 8px 20px 8px 20px;
+}
+
+.mobile-menu {
+  display: none;
+}
+
+/* Banner Related Style Start Here */
+.banner{
+  display: flex;
+}
+
+/* Medium Device */
+@media (min-width: 576px) and (max-width: 1024px) {
+  .nav-bar {
+    width: 100%;
+    padding: 4% 3% 0 3%;
+  }
+
+  .menu {
+    gap: 25px;
+  }
+}
+
+/* Small Device */
+@media (max-width: 576px) {
+  .menu {
+    display: none;
+  }
+  .mobile-menu {
+    display: flex;
+  }
+  .nav-bar {
+    width: 100%;
+    padding: 4% 2% 0 2%;
+  }
+}
